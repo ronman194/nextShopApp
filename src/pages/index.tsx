@@ -3,6 +3,8 @@ import { initMongoose } from "@/lib/mongoose";
 import ProductType from "@/types/types";
 import { useEffect, useState } from "react"
 import { findAllProducts } from "./api/products";
+import Footer from "@/components/Footer";
+import Layout from "@/components/Layout";
 
 export default function Home({ products }: { products: ProductType[] }) {
 
@@ -16,7 +18,7 @@ export default function Home({ products }: { products: ProductType[] }) {
   }
 
   return (
-    <div className='p-5'>
+    <Layout>
       <input type="text"
         value={searchBox}
         onChange={e => setSearchBox(e.target.value)}
@@ -40,7 +42,7 @@ export default function Home({ products }: { products: ProductType[] }) {
           </div>
         ))}
       </div>
-    </div>
+    </Layout>
   )
 }
 

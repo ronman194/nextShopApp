@@ -25,3 +25,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.footer{
+  @apply sticky bottom-0 bg-zinc-900 p-5 w-full flex justify-center space-x-16 border-t border-gray-200;
+}
+.footer-selected{
+  @apply flex justify-center items-center flex-col text-cyan-500;
+}
+.footer-not-selected{
+  @apply flex justify-center items-center flex-col;
+}
